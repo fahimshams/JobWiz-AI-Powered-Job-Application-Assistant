@@ -9,6 +9,9 @@ import GetStarted from "./pages/GetStarted";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
+import Upload from "./pages/Upload";
+import AnalysisResults from "./pages/AnalysisResults";
+import ResumeEditor from "./pages/ResumeEditor";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
@@ -22,12 +25,16 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Upload />} />
+          <Route path="/home" element={<Index />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/get-started" element={<GetStarted />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/analysis-results" element={<AnalysisResults />} />
+          <Route path="/resume-editor" element={<ResumeEditor />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
