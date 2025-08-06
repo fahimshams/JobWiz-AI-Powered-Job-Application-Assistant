@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -23,13 +24,17 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group px-8 py-6 text-lg">
-              Get Started Free
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg" className="px-8 py-6 text-lg">
-              Watch Demo
-            </Button>
+            <Link to="/get-started">
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group px-8 py-6 text-lg">
+                Get Started Free
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/demo">
+              <Button variant="outline" size="lg" className="px-8 py-6 text-lg">
+                Watch Demo
+              </Button>
+            </Link>
           </div>
           
           <div className="pt-8">

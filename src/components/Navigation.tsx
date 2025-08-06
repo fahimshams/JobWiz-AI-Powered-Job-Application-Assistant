@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,12 +36,16 @@ const Navigation = () => {
           
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" size="sm">
-              Sign In
-            </Button>
-            <Button size="sm" className="bg-gradient-primary">
-              Get Started
-            </Button>
+            <Link to="/signin">
+              <Button variant="outline" size="sm">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/get-started">
+              <Button size="sm" className="bg-gradient-primary">
+                Get Started
+              </Button>
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
