@@ -8,8 +8,8 @@ load_dotenv()
 
 class ResumeAnalyzer:
     def __init__(self):
-        self.client = openai.OpenAI(
-            api_key=os.getenv("OPENAI_API_KEY", "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")
+       self.client = openai.OpenAI(
+            api_key=os.getenv("OPENAI_API_KEY", "your-openai-api-key")
         )
     
     def analyze_resume(self, resume_text: str) -> Dict:
